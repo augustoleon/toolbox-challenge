@@ -1,5 +1,5 @@
 const { downloadAndFormatterFiles, getFiles } = require('../services')
-const validateData = require('../utils/schemaValidator');
+const validateData = require('../utils/schemaValidator')
 
 // Controllers
 const getFilesData = async (req, res) => {
@@ -7,9 +7,9 @@ const getFilesData = async (req, res) => {
     const formatteredFiles = await downloadAndFormatterFiles()
 
     // Validar la respuesta contra el esquema
-    const validationError = validateData('getFilesDataSchema', formatteredFiles);
+    const validationError = validateData('getFilesDataSchema', formatteredFiles)
     if (validationError) {
-      throw new Error(`Response validation failed: ${validationError}`);
+      throw new Error(`Response validation failed: ${validationError}`)
     }
     res.json({ data: formatteredFiles })
   } catch (err) {
@@ -23,9 +23,9 @@ const getFilesList = async (req, res) => {
     const files = await getFiles()
 
     // Validar la respuesta contra el esquema
-    const validationError = validateData('getFilesListSchema', files);
+    const validationError = validateData('getFilesListSchema', files)
     if (validationError) {
-      throw new Error(`Response validation failed: ${validationError}`);
+      throw new Error(`Response validation failed: ${validationError}`)
     }
     res.json({ data: files })
   } catch (err) {

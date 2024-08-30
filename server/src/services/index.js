@@ -7,7 +7,6 @@ const { formatterFiles } = require('./csvServices')
 const getFiles = async () => {
   try {
     const filesRes = await fetchFiles()
-    console.log('file res', filesRes)
 
     if (filesRes.status !== 200) {
       throw new Error(`Request failed with status ${filesRes.status}`)

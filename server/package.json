@@ -4,8 +4,9 @@
   "description": "It's a server to get files and parser",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:server": "nodemon src"
+    "test": "mocha",
+    "start:server": "nodemon src",
+    "standard": "npx standard --fix"
   },
   "author": "Cesar A. Leon",
   "license": "ISC",
@@ -18,6 +19,9 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "mocha": "^5.2.0",
     "nodemon": "^3.1.4",
     "standard": "^17.1.0"
   }
