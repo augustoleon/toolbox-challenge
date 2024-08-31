@@ -8,7 +8,7 @@ export const fetchFiles = () => async (dispatch) => {
     dispatch(filesFetched(response.data))
   } catch (error) {
     console.error('Failed to fetch files:', error)
-    dispatch(fetchFilesFailed(`Failed to fetch /api/v1/files/data ${error.status}`))
+    dispatch(fetchFilesFailed(`Failed to fetch /api/v1/files/data ${error.message}`))
   }
 }
 

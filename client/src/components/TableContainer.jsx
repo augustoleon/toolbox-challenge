@@ -18,8 +18,17 @@ function TableContainer ({ files, error }) {
         </thead>
         <tbody>
             {
-                files?.data && files?.data?.map(({ file, lines }, index) =>
-                    <Files key={`${index + 1}`} file={file} lines={lines} />
+                files?.data ? 
+                (
+                  files?.data?.map(({ file, lines }, index) =>
+                    <Files key={`${index + 1}`} file={file} lines={lines} error={error}/>
+                  )
+                ) 
+                : 
+                (
+                  <tr>
+                    <td colSpan='4'>No data available</td>
+                  </tr>
                 )
             }
         </tbody>

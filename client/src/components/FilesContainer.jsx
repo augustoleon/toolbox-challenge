@@ -13,8 +13,6 @@ function FilesContainer () {
   const loading = useSelector((state) => state.files.loading)
   const error = useSelector((state) => state.files.error)
 
-  console.log({ files })
-
   useEffect(() => {
     dispatch(fetchFiles())
   }, [dispatch])

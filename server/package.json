@@ -6,6 +6,8 @@
   "scripts": {
     "test": "mocha",
     "start": "nodemon src",
+    "start:client": "npm start --prefix ../client ",
+    "start:serv:cli": "concurrently \"npm run start\" \"npm run start:client\"",
     "standard": "npx standard --fix"
   },
   "author": "Cesar A. Leon",
@@ -21,6 +23,7 @@
   "devDependencies": {
     "chai": "^4.3.7",
     "chai-http": "^4.3.0",
+    "concurrently": "^8.2.2",
     "mocha": "^5.2.0",
     "nodemon": "^3.1.4",
     "standard": "^17.1.0"
