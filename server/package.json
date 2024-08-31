@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "start:server": "nodemon src",
+    "start": "nodemon src",
     "standard": "npx standard --fix"
   },
   "author": "Cesar A. Leon",

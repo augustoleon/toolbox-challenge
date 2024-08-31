@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const baseUrl = process.env.BASE_URL
+const baseUrl = process.env.BASE_URL || "https://echo-serv.tbxnet.com/v1"
 const headers = { Authorization: 'Bearer aSuperSecretKey' }
 
 // Función para obtener la lista de archivos

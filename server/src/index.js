@@ -5,7 +5,11 @@ const cors = require('cors')
 // Controller
 const fileRouter = require('./routes')
 
-app.use(cors())
+app.use(cors({
+    origin: '*', // Permitir todas las solicitudes (no recomendado en producción)
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+    allowedHeaders: ['Content-Type', 'Authorization'], // Encabezados permitidos
+  }));
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
