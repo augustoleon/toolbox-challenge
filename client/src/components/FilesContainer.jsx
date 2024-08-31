@@ -21,7 +21,7 @@ function FilesContainer () {
   return (
     <section>
       <LoaderBoundary loading={loading}>
-        <div className='dark-overlay'>
+        <div className='overlay'>
           <div className='challenge-inner'>
             <div className='content-challenge'>
               <TableContainer files={files} error={error} />

@@ -10,7 +10,7 @@ function TableContainer ({ files, error }) {
       <Table responsive striped bordered>
         <thead>
           <tr style={{ 'border-bottom': '2px solid black'}}>
-            <th>File name</th>
+            <th>File Name</th>
             <th>Text</th>
             <th>Number</th>
             <th>Hex</th>
