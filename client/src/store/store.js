@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
-import thunk from 'redux-thunk';
-import rootReducer from './rootReducer'
+import thunk from 'redux-thunk'
+import filesReducer from '../slices/filesSlices'
 
 const store = configureStore({
-  reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
+  reducer: {
+    files: filesReducer
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(thunk) // Añadimos thunk al middleware
 })
 
 export default store

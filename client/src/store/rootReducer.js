@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import filesReducer from '../reducers/filesReducer'
+import filesSlices from '../slices/filesSlices'
 
 const rootReducer = combineReducers({
-  example: filesReducer
+  files: filesSlices
 })
 
 export default rootReducer
