@@ -37,7 +37,7 @@ Este challenge consta de dos aplicaciones: un servidor que nos devuelve una list
    docker-compose up -d
 
 2. Este comando inicia los contenedores en segundo plano.
-3. Instala y ejecuta las aplicaciones.
+3. Instala e inicia las aplicaciones.
 
 ## Inicia las aplicaciones ![Cohete](https://img.icons8.com/material-outlined/24/rocket.png)
 
@@ -45,7 +45,7 @@ Este challenge consta de dos aplicaciones: un servidor que nos devuelve una list
 2. Puedes ejecutar ambas aplicaciones con un unico comando para iniciarlas:
 
    ```bash
-   npm start:serv:cli
+   npm run start:serv:cli
 
 3. De forma tradicional, iniciar el server:
 
